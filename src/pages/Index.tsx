@@ -50,7 +50,7 @@ const Index = () => {
         <div className="relative z-10 flex-1 flex items-center justify-center">
           <div className="w-full max-w-[1440px] mx-auto px-12 py-16 flex items-center justify-center">
             {/* Form */}
-            <div className="w-full max-w-lg bg-card/95 backdrop-blur-sm border border-border rounded-xl p-8 shadow-lg">
+            <div className="w-full max-w-lg bg-white/10 backdrop-blur-xl border border-white/20 rounded-xl p-8 shadow-2xl">
               <h2 className="text-lg font-semibold text-foreground mb-6">Enter brand details</h2>
               <BrandForm onSubmit={handleSubmit} isLoading={isLoading} />
             </div>
