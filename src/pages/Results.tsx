@@ -192,9 +192,9 @@ const Results = () => {
               <h2 className="text-lg font-semibold text-foreground">Generated Tweets</h2>
               <span className="text-sm text-muted-foreground">{tweets.length} tweets</span>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="space-y-3">
               {tweets.map((tweet, i) => (
-                <TweetCard key={i} text={tweet.text} style={tweet.style} index={i} />
+                <TweetCard key={i} text={tweet.text} style={tweet.style} index={i} brandName={brandName} />
               ))}
             </div>
           </section>
