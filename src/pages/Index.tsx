@@ -30,7 +30,7 @@ const Index = () => {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="border-b border-border bg-card">
-        <div className="w-full max-w-[1200px] mx-auto px-8 h-16 flex items-center gap-3">
+        <div className="w-full max-w-[1440px] mx-auto px-12 h-16 flex items-center gap-3">
           <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
             <Twitter className="h-4 w-4 text-primary-foreground" />
           </div>
@@ -40,7 +40,7 @@ const Index = () => {
 
       {/* Main — two column: left info, right form */}
       <div className="flex-1 flex items-center justify-center">
-        <div className="w-full max-w-[1200px] mx-auto px-8 py-16 grid grid-cols-2 gap-20 items-center">
+        <div className="w-full max-w-[1440px] mx-auto px-12 py-16 grid grid-cols-2 gap-24 items-center">
           
           {/* Left — description */}
           <div className="space-y-6">
