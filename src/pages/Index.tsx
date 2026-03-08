@@ -39,8 +39,8 @@ const Index = () => {
       </header>
 
       {/* Main — two columns */}
-      <div className="flex-1 flex items-center">
-        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 py-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+      <div className="flex-1 flex items-center overflow-hidden">
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 py-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* Left — About */}
           <div className="space-y-8">
