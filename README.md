@@ -2,7 +2,7 @@
 
 AI-powered tweet generation that matches your brand voice perfectly.
 
-**Author:** Tharun C R
+
 
 ## Tech Stack
 
@@ -23,3 +23,4 @@ npm run dev
 ```sh
 npm run build
 ```
+**Author:** Tharun C R
