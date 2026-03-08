@@ -55,27 +55,16 @@ const Index = () => {
     <div className="min-h-screen bg-background flex flex-col">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border bg-card">
-        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 h-20 flex items-center gap-3">
-          <div className="h-10 w-10 rounded-lg bg-primary flex items-center justify-center">
-            <Twitter className="h-5 w-5 text-primary-foreground" />
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 h-14 flex items-center gap-3">
+          <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center">
+            <Twitter className="h-4 w-4 text-primary-foreground" />
           </div>
-          <span className="text-lg font-semibold text-foreground tracking-tight">BrandTweet Generator</span>
-
-          {/* Step indicator */}
-          <div className="ml-auto flex items-center gap-2 text-sm">
-            <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${step === "input" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>
-              1. Analyze
-            </span>
-            <span className="text-muted-foreground">→</span>
-            <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${step === "analysis" ? "bg-primary text-primary-foreground" : "bg-muted text-muted-foreground"}`}>
-              2. Generate
-            </span>
-          </div>
+          <span className="text-base font-semibold text-foreground tracking-tight">BrandTweet Generator</span>
         </div>
       </header>
 
       {/* Main */}
-      <div className="flex-1 pt-20 pb-16">
+      <div className="flex-1 pt-14 pb-12">
         {step === "input" ? (
           <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 py-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[calc(100vh-10rem)]">
             {/* Left — About */}
@@ -161,9 +150,9 @@ const Index = () => {
       </div>
 
       {/* Footer */}
-      <footer className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-card py-4">
+      <footer className="fixed bottom-0 left-0 right-0 z-50 border-t border-border bg-card py-2.5">
         <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 text-center">
-          <p className="text-base text-muted-foreground">Developed by <span className="font-semibold text-foreground">Tharun C R</span></p>
+          <p className="text-sm text-muted-foreground">Developed by <span className="font-semibold text-foreground">Tharun C R</span></p>
         </div>
       </footer>
     </div>
