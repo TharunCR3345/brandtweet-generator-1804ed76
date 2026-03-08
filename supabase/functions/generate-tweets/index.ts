@@ -11,8 +11,8 @@ serve(async (req) => {
   try {
     const { brandName, industry, objective, productDescription } = await req.json();
 
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
+    const API_KEY = Deno.env.get("LOVABLE_API_KEY");
+    if (!API_KEY) throw new Error("AI API key is not configured");
 
     const analysisPrompt = `You are a real social media manager who has worked at ${brandName} for 3 years. You write tweets the way a real human does — imperfect, relatable, sometimes casual, sometimes punchy. You never sound robotic or corporate.
 

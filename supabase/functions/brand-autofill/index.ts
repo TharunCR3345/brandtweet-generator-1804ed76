@@ -12,8 +12,8 @@ serve(async (req) => {
     const { brandName } = await req.json();
     if (!brandName) throw new Error("Brand name is required");
 
-    const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
-    if (!LOVABLE_API_KEY) throw new Error("LOVABLE_API_KEY is not configured");
+    const API_KEY = Deno.env.get("LOVABLE_API_KEY");
+    if (!API_KEY) throw new Error("AI API key is not configured");
 
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
