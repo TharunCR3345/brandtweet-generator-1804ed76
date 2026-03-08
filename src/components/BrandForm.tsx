@@ -14,7 +14,7 @@ interface BrandFormProps {
   buttonText?: string;
 }
 
-export function BrandForm({ onSubmit, isLoading }: BrandFormProps) {
+export function BrandForm({ onSubmit, isLoading, buttonText }: BrandFormProps) {
   const [brandName, setBrandName] = useState("");
   const [industry, setIndustry] = useState("");
   const [objective, setObjective] = useState("");
