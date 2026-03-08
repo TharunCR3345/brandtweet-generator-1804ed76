@@ -11,6 +11,7 @@ import { useToast } from "@/hooks/use-toast";
 interface BrandFormProps {
   onSubmit: (input: BrandInput) => void;
   isLoading: boolean;
+  buttonText?: string;
 }
 
 export function BrandForm({ onSubmit, isLoading }: BrandFormProps) {
