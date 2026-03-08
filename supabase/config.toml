@@ -5,3 +5,6 @@ verify_jwt = false
 
 [functions.brand-autofill]
 verify_jwt = false
+
+[functions.analyze-brand-social]
+verify_jwt = false

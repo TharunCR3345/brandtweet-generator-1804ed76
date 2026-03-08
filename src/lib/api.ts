@@ -28,7 +28,56 @@ export interface BrandInput {
   productDescription: string;
 }
 
-export async function generateTweets(input: BrandInput): Promise<GenerateResult> {
+// Social media analysis types
+export interface SocialPlatformPost {
+  text: string;
+  engagement: string;
+  type: string;
+}
+
+export interface SocialPlatform {
+  platform: string;
+  handle: string;
+  followerEstimate: string;
+  postingFrequency: string;
+  samplePosts: SocialPlatformPost[];
+}
+
+export interface VoiceProfile {
+  tone: string;
+  personality: string;
+  writingPatterns: string[];
+  emojiStyle: string;
+  hashtagStyle: string;
+  contentThemes: string[];
+  engagementStyle: string;
+  uniqueTraits: string[];
+}
+
+export interface AudienceProfile {
+  demographics: string;
+  interests: string[];
+  engagementPatterns: string;
+}
+
+export interface SocialAnalysisResult {
+  platforms: SocialPlatform[];
+  voiceProfile: VoiceProfile;
+  audienceProfile: AudienceProfile;
+  overallSummary: string;
+}
+
+export async function analyzeBrandSocial(brandName: string): Promise<SocialAnalysisResult> {
+  const { data, error } = await supabase.functions.invoke("analyze-brand-social", {
+    body: { brandName },
+  });
+
+  if (error) throw new Error(error.message || "Failed to analyze brand");
+  if (data?.error) throw new Error(data.error);
+  return data as SocialAnalysisResult;
+}
+
+export async function generateTweets(input: BrandInput & { socialAnalysis?: SocialAnalysisResult }): Promise<GenerateResult> {
   const { data, error } = await supabase.functions.invoke("generate-tweets", {
     body: input,
   });
